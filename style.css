@@ -1,0 +1,483 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+}
+h1{
+  font-size: 72px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+/*---------------------------------------Header-----------------------------------------*/
+header{
+  width: 100%;
+  background-color: #b4b3b3;
+  /*se aplica dimensiones para ubicar contenido del contenedor principal*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100px;
+}
+.contenedor-elementos-menu{
+  /*se aplica dimensiones para ubicar contenido del contenedor secundario*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu-opciones{
+  /*se aplica dimensiones para ubicar contenido del contenedor opciones*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo > img{
+  display: inline-block;
+  max-height:9rem;
+  width: 9rem;
+  padding: 2px 2px;
+  margin-right: 40px;
+}
+.menu-opciones  > li{
+  padding: 3px 20px;
+  
+}
+
+.menu-opciones  a{
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  width: 2rem;
+  height: 2rem;
+  font-size: 4rem;
+  padding: 0.25rem 0;/*para que el after se aplique con la animacion*/
+  position: relative; /*para que el after se aplique con la animacion*/
+  /*
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  */
+  text-align: center;
+  /*se aplica dimensiones para ubicar los a*/
+}
+/*--------------------main-----------------------*/
+/*--------------------main parte 1-----------------------*/
+.contenedor-parte1 {
+  width: 100%;
+  display: flex;
+  align-items: center;     /* centra verticalmente */
+  justify-content: space-between; /* texto a la izq, img a la der */
+  overflow: hidden;        /* corta la imagen al borde derecho del verde */
+  /*background-color: green;*/
+  /*border: 2px solid black;*/
+}
+.contenedor-texto1{
+  margin: 7rem 0rem;   /* se despega de los lados */
+  margin-left: 15rem;;
+  padding: 40px;       /* espacio interno cómodo */
+  /*border: 2px solid black;*/
+}
+
+.contenedor-texto1 > h1{
+  display: flex;
+  /*max-width: 250px;    ancho máximo de la caja */
+  margin: 0 auto;     /* centrado horizontal */
+  text-align: left; 
+  margin-bottom: 2rem; 
+  width: 600px;
+}
+.contenedor-texto1 > h2{
+  /* max-width: 150px;   ancho máximo de la caja */
+  margin: 0 auto;     /* centrado horizontal */
+  text-align: left; /* opcional, centrado del texto */
+  margin-bottom: 1.4rem;
+  margin-left: 0;
+  margin-right: 0;
+  width: 500px;
+  text-align: justify;
+}
+.contenedor-texto1 > p{
+  color: #999999;
+  margin-left: 0;
+  margin-right: 0;
+  width: 460px;
+  text-align: justify;
+}
+
+.numero-tel{
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 21rem;
+}
+.numero-tel > i {
+  font-size: 3.5rem; /* hace el icono un poquito más grande */
+  color: skyblue;
+}
+
+.imagenpng1 {
+  flex: 1;                 
+  display: flex;
+  justify-content: flex-end; /* no cambia nada de la alineación */
+
+}
+
+.circulos {
+  position: relative;
+  overflow: hidden;   /*  aquí se recortan imagen + círculos */
+}
+
+.circulos img {
+  width: 1700px;
+  padding-right: 300px;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1; /* imagen delante */
+}
+
+/* circulo 1 */
+.circulos::before {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: orange;
+  top: 34.5%;
+  left: 1%;
+  transform: translate(1%, 2%);
+  z-index: 0; /* detrás de la img */
+}
+
+/* circulo 2 */
+.circulos::after {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 803px;
+  border-radius: 50%;
+  background-color: rgb(233, 127, 5);
+  top: -10%;
+  left: 10%;
+  transform: translate(1%, 2%);
+  z-index: 0; /* detrás de la img */
+}
+/*--------------------main parte 2-----------------------*/
+.contenedor-parte2 {
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap;  
+  margin: 0;
+  padding: 40px;
+  margin-bottom: 2rem;
+}
+.contenedor-texto2{
+  display: flex;
+  flex-direction: column;/* hijos en columna: h2 → párrafos → botón */
+  align-items: center;     /* centra cada bloque horizontalmente */
+  max-width: 1200px;
+  margin-bottom: 8rem;
+}
+
+.contenedor-texto2 > h2{
+  /*max-width: 250px;    ancho máximo de la caja */
+  width: 100%;
+  font-size: 40px;
+  margin-bottom: 2rem; 
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.contenedor-texto2 >p{
+  margin-bottom: 2px;
+}
+.contenedor-parrafos {
+  display: flex;           
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  color: #999999;      
+}
+
+/* columna izquierda = solo párrafo */
+.pIzquierdo {
+  width: 500px;
+  text-align: justify;
+  padding-right: 1rem;   
+}
+
+/* columna derecha = párrafo + botón */
+.columna-derecha {
+  width: 500px;
+  display: flex;
+  flex-direction: column;  /* apila pDerecho y botón */
+  gap: 1.5rem;             /* espacio entre texto y botón */
+}
+
+.pDerecho {
+  text-align: justify;
+  padding-left: 1rem;    
+}
+
+.contenedor-boton {
+  align-self: flex-end;      /* empuja el botón a la derecha */
+  padding: 2.2rem 5rem;
+  font-size: 1.8rem;
+  background-color: rgb(8, 187, 211);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  margin-right: 29rem;
+  margin-top: 2rem;
+}
+
+.imagen1 > img{
+  width: 780px;   /* ancho fijo */
+  height: auto;  /* alto fijo */
+  object-fit: cover; /*  recorta para que no se deformen */
+  border-radius: 8px;
+}
+/*--------------------main parte 3-----------------------*/
+
+.contenedor-parte3 {
+  width: 100%;
+  display: flex; 
+  justify-content: center;        /* 🔥 centra el contenedor-elementos */
+  flex-wrap: wrap;  
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.contenedor-elementos {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;  /*imagen a la izq, form a la der */
+  align-items: center;             /* alinea verticalmente */
+  flex-wrap: wrap;  
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.imagenpng3 {                
+  flex: 1;                 
+  display: flex;
+  justify-content: flex-start;
+  max-width: 50%;              /* limita para que no ocupe todo */
+}
+
+.circulos2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.circulos2 img {
+  width: 1180px;
+  padding-left: 300px;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  margin-left: -300px;  /* en vez de padding, usamos margen negativo */
+  padding-left: 0;      /* elimina el padding que empuja */
+}
+
+/* círculos (están bien) */
+.circulos2::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: rgb(233, 127, 5);
+  top: 33%;
+  left: 7%;
+  transform: translate(1%, 2%);
+  z-index: 0;
+}
+
+.circulos2::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: orange;
+  top: -1%;
+  left: -15%;
+  transform: translate(1%, 2%);
+  z-index: 0;
+}
+.contenedor-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;              /* 🔥 un poco más ancho para acomodar inputs */
+  margin-left: 2rem;
+  margin-right: 38rem;
+  background-color: rgb(202, 202, 202);
+  padding: 2rem;                 /* 🔥 padding más equilibrado */
+  border-radius: 15px;           /* 🔥 bordes más suaves */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 🔥 sombra sutil */
+}
+
+.contenedor-form > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  font-size: 2.8rem;            /* 🔥 título más grande */
+  font-weight: bold;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;                  /* 🔥 un poco más de espacio */
+  width: 100%;                  /* 🔥 ocupa todo el ancho disponible */
+}
+
+.formulario label span {
+  font-weight: bold;
+  color: white;
+  font-size: 1.8rem;           /* 🔥 texto un poco más grande */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 🔥 sombra en texto */
+}
+
+/* Inputs generales */
+.formulario input[type="tel"],
+.formulario input[type="text"],
+.formulario input[type="datetime-local"] {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  background-color: #f8f8f8;   /* 🔥 fondo más claro */
+  transition: all 0.3s ease;   /* 🔥 transición suave */
+  outline: none;
+}
+
+/* Focus en inputs */
+.formulario input[type="tel"]:focus,
+.formulario input[type="text"]:focus,
+.formulario input[type="datetime-local"]:focus {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(8, 187, 211, 0.5); /* 🔥 glow azul al hacer focus */
+  transform: scale(1.02);      /* 🔥 efecto de crecimiento sutil */
+}
+
+/* Inputs específicos con tus medidas */
+.telefono, 
+.nombre {
+  height: 3.5rem;
+  width: 35rem;
+}
+
+.fecha {
+  height: 3.5rem;
+  width: 35rem;
+}
+
+.mensaje {
+  height: 10rem;
+  width: 35rem;
+  resize: vertical;            /* 🔥 permite redimensionar verticalmente */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Botón mejorado */
+.formulario input[type="button"] {
+  padding: 1rem 3rem;
+  background-color: rgb(8, 187, 211);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(8, 187, 211, 0.3); /* 🔥 sombra del botón */
+}
+
+
+
+/*-------------------------------------------*/
+/*se aplica dimensiones para ubicar los a*/
+.galeria > img {
+  width: 70px;   /* ancho fijo */
+  height: 70px;  /* alto fijo */
+  object-fit: cover; /*  recorta para que no se deformen */
+}
+
+/*-------------------------------------------*/
+/*-----------------animacion--------------------------*/
+/*animacion hover a opciones de menu*/
+.menu-opciones a::after {
+  content: "";
+  position: absolute;
+  left: 50%;                    /* centrado horizontalmente */
+  transform: translateX(-50%);  /* ajuste para centrar perfectamente */
+  bottom: 4px;                  /* ajusta esta distancia para que quede bajo el texto */
+  width: 0;
+  height: 4px;
+  background-color: rgb(90, 89, 89);
+  transition: width 0.3s ease;
+}
+
+.menu-opciones a:hover::after {
+  width: 100%;
+}
+
+.numero-tel:hover{
+  color: skyblue;
+}
+.contenedor-boton:hover {
+  background-color: rgb(111, 226, 241);
+}
+.formulario input[type="button"]:hover {
+  background-color: rgb(111, 226, 241);
+}
+
+/*animacion hover a opciones de logo*/
+/*
+.logo > img:hover{ 
+  width: 55px;
+  padding: 0rem 0rem;
+  color: red;
+}*/
