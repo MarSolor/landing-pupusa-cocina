@@ -556,6 +556,13 @@ header{
   gap: 1rem;
   text-align: left;
 }
+.contenedor-der-menu > .menu-art2 {
+  margin-bottom: 3rem;
+}
+.contenedor-der-menu > .menu-comida2 {
+  margin-bottom: 2rem;
+  padding: 5px;
+}
 .plato1, .plato2, .mayus-h2{
   font-weight: bold;
   text-transform: uppercase;
@@ -703,6 +710,33 @@ header{
 .galeria .container[alt*="derecha arriba"]   { grid-column: 3 / 4; grid-row: 1 / 2; }
 .galeria .container[alt*="derecha abajo"]   { grid-column: 3 / 4; grid-row: 2 / 3; }
 
+.boton-galeria{
+  padding: 2rem 5rem;
+  background-color: rgb(8, 187, 211);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(8, 187, 211, 0.3);  /*sombra del botón */
+  margin-bottom: 2.7rem;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 5rem;
+}
+/*--------------------main parte 6-----------------------*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -732,5 +766,9 @@ header{
   background-color: rgb(111, 226, 241);
 }
 .formulario input[type="button"]:hover {
+  background-color: rgb(111, 226, 241);
+}
+
+.boton-galeria:hover {
   background-color: rgb(111, 226, 241);
 }
