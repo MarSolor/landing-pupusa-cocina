@@ -749,6 +749,7 @@ header{
 .contenedor-centro-menu2 h2 {
   margin-bottom: 4rem;
   font-size: 40px;
+  font-weight: normal;
 }
 
 /*contenedor de columnas*/
