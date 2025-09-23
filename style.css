@@ -2,7 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid red; 
+ /*
+  outline: 1px solid red;  
+  */
   list-style: none;
   text-decoration: none;
 } 
@@ -20,6 +22,14 @@ h2{
 p{
   font-size: 18px;
   font-family: sans-serif;
+}
+hr {
+  width: 50%;           /* la mitad del ancho */
+  margin: 2rem auto;    /*centrado horizontal */
+  border: none;         /*se quita estilo por defecto */
+  height: 0.4rem;         /*grosor */
+  background-color: rgba(0, 0, 0, 0.603);  /* color de la línea */
+  border-radius: 1rem;  /* opcional: bordes redondeados */
 }
 /*---------------------------------------Header-----------------------------------------*/
 header{
@@ -143,7 +153,6 @@ header{
   flex: 1;                 
   display: flex;
   justify-content: flex-end; /* no cambia nada de la alineación */
-
 }
 
 .circulos {
@@ -261,14 +270,14 @@ header{
   width: 780px;   /* ancho fijo */
   height: auto;  /* alto fijo */
   object-fit: cover; /*  recorta para que no se deformen */
-  border-radius: 8px;
+  border-radius: 50px;
 }
 /*--------------------main parte 3-----------------------*/
 
 .contenedor-parte3 {
   width: 100%;
   display: flex; 
-  justify-content: center;        /* 🔥 centra el contenedor-elementos */
+  justify-content: center;        /* centra el contenedor-elementos */
   flex-wrap: wrap;  
   margin: 0;
   padding: 0;
@@ -339,21 +348,24 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;              /* 🔥 un poco más ancho para acomodar inputs */
+  max-width: 500px;              /* un poco más ancho para acomodar inputs */
   margin-left: 2rem;
-  margin-right: 38rem;
-  background-color: rgb(202, 202, 202);
-  padding: 2rem;                 /* 🔥 padding más equilibrado */
-  border-radius: 15px;           /* 🔥 bordes más suaves */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 🔥 sombra sutil */
+  margin-right: 46rem;
+  background-color: rgb(236, 236, 236);
+  padding: 2rem;                 /* padding más equilibrado */
+  border-radius: 45px;           /* bordes más suaves */
+  /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  sombra sutil */
 }
 
 .contenedor-form > h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: white;
-  font-size: 2.8rem;            /* 🔥 título más grande */
-  font-weight: bold;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
+  color: black;
+  font-size: 3.8rem;            /* título más grande */
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 100%;
 }
 
 .formulario {
@@ -362,21 +374,22 @@ header{
   gap: 2.5rem;
   width: 100%;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
 }
 
 .formulario label {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;                  /* 🔥 un poco más de espacio */
-  width: 100%;                  /* 🔥 ocupa todo el ancho disponible */
+  gap: 0.8rem;                  /* un poco más de espacio */
+  width: 91.2%;                  /*  ocupa todo el ancho disponible */
+  
 }
-
 .formulario label span {
-  font-weight: bold;
-  color: white;
-  font-size: 1.8rem;           /* 🔥 texto un poco más grande */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 🔥 sombra en texto */
+  font-weight: normal;
+  color: black;
+  font-size: 1.8rem;           /* texto un poco más grande */
+  /* text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); sombra en texto */
+  padding: 0;
 }
 
 /* Inputs generales */
@@ -387,9 +400,12 @@ header{
   border: none;
   border-radius: 10px;
   font-size: 1.6rem;
-  background-color: #f8f8f8;   /* 🔥 fondo más claro */
-  transition: all 0.3s ease;   /* 🔥 transición suave */
+  background-color: #f8f8f8;   /* fondo más claro */
+  transition: all 0.3s ease;   /* transición suave */
   outline: none;
+  color: #666;
+  text-align: start;
+  ;
 }
 
 /* Focus en inputs */
@@ -397,26 +413,68 @@ header{
 .formulario input[type="text"]:focus,
 .formulario input[type="datetime-local"]:focus {
   background-color: white;
-  box-shadow: 0 0 10px rgba(8, 187, 211, 0.5); /* 🔥 glow azul al hacer focus */
-  transform: scale(1.02);      /* 🔥 efecto de crecimiento sutil */
+  box-shadow: 0 0 10px rgba(8, 187, 211, 0.5); /* brillo azul al hacer focus */
+  transform: scale(1.02);      /*efecto de crecimiento sutil */
+}
+/* lex para que se repartan automáticamente: */
+.fila-doble > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;                      /* Se reparten el espacio disponible */
+  padding: 0;
+  
+}
+
+.fila-doble {
+  display: flex;
+  justify-content: space-between; /* teléfono a la izq, nombre a la der */
+  width: 95%;
+  gap: 1.5rem;
+}
+
+.fila-doble label{
+  flex: 1;              /* que no se estiren */
+  width: 39%;              /* cada label ocupa 40% del ancho total */
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+/* Los spans alineados al inicio (izquierda) */
+.fila-doble label span {
+  text-align: start;  /* etiqueta "Teléfono"/"Nombre" alineada a la izquierda */
+  width: 100%;
+}
+
+/* Los inputs centrados con width 80% */
+.fila-doble label input {
+  width: 100%;         /* el input solo ocupa el 80% */
+  margin: 0 auto;     /* lo centra dentro del label */
+  height: 3.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  background-color: #f8f8f8;
+  color: #666;
 }
 
 /* Inputs específicos con tus medidas */
 .telefono, 
 .nombre {
   height: 3.5rem;
-  width: 35rem;
+  width: 90%;
+  height: 3.5rem;
 }
 
 .fecha {
   height: 3.5rem;
-  width: 35rem;
+  width: 42rem;
 }
 
 .mensaje {
   height: 10rem;
-  width: 35rem;
-  resize: vertical;            /* 🔥 permite redimensionar verticalmente */
+  width: 42rem;
+  resize: vertical;            /*permite redimensionar verticalmente */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -430,10 +488,88 @@ header{
   font-size: 1.8rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(8, 187, 211, 0.3); /* 🔥 sombra del botón */
+  box-shadow: 0 4px 15px rgba(8, 187, 211, 0.3);  /*sombra del botón */
+  margin-bottom: 2.7rem;
+  align-self: flex-start;
+  margin-left: 2rem;
+  }
+/*--------------------main parte 4-----------------------*/
+.contenedor-parte4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;  /* Primero apila centro y bajo-menu */
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
+
+/* Bloque superior centrado */
+.contenedor-centro-menu {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+.contenedor-centro-menu h2{
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 4rem;
+}
+
+/* Bloque inferior que contiene las 2 columnas */
+.contenedor-bajo-menu {
+  display: flex;
+  justify-content: space-between; /* Izq y Der separados */
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* ancho máximo del bloque */
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+/* Columna izquierda */
+.contenedor-izq-menu {
+  flex: 1; /* ocupa mitad */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.contenedor-izq-menu > .menu-art2 {
+  margin-bottom: 3rem;
+}
+
+.contenedor-izq-menu > .menu-comida1 {
+  margin-bottom: 2rem;
+  padding: 5px;
+}
+
+/* Columna derecha */
+.contenedor-der-menu {
+  flex: 1; /* ocupa mitad */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.plato1, .plato2, .mayus-h2{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mayus-h2{
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.contenedor-bajo-menu p{
+  padding: 0.2rem;
+}
+/*--------------------main parte 1-----------------------*/
+
+
 
 
 
@@ -456,7 +592,7 @@ header{
   bottom: 4px;                  /* ajusta esta distancia para que quede bajo el texto */
   width: 0;
   height: 4px;
-  background-color: rgb(90, 89, 89);
+  background-color: rgb(148, 147, 147);
   transition: width 0.3s ease;
 }
 
@@ -474,10 +610,3 @@ header{
   background-color: rgb(111, 226, 241);
 }
 
-/*animacion hover a opciones de logo*/
-/*
-.logo > img:hover{ 
-  width: 55px;
-  padding: 0rem 0rem;
-  color: red;
-}*/
