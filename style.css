@@ -746,6 +746,10 @@ header{
   text-align: left;
   background-color: violet;
 }
+.contenedor-centro-menu2 > h2, p{
+  padding-top: 2rem;
+  text-align: left;
+}
 
 /* Columna izquierda */
 .contenedor-izquiedo-menu1 {
@@ -781,19 +785,6 @@ header{
 .contenedor-info-menu2 > .p{
   margin-bottom: 2rem;
   padding: 5px;
-}
-.plato1, .plato2, .mayus-h2{
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.mayus-h2{
-  font-size: 2.5rem;
-  font-weight: normal;
-}
-
-.contenedor-bajo-menu p{
-  padding: 0.2rem;
 }
 
 
