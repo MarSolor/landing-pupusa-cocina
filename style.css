@@ -1357,3 +1357,19 @@ footer p {
 @media (max-width: 600px){
   footer{ padding: 1.6rem 1rem; }
 }
+
+/* =================== Nav siempre visible=================== */
+:root{ --alto-header: 100px; } /* coincide con tu header */
+html{ scroll-behavior: smooth; }
+
+header{
+  position: sticky;   /* se pega al top al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+body{
+  scroll-padding-top: var(--alto-header); /* evita que las anclas queden tapadas */
+}
+
